@@ -1,0 +1,24 @@
+{
+  "name": "playwright-learning-journey",
+  "version": "1.0.0",
+  "description": "Learning Playwright from scratch - daily practice and real solutions",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "debug": "PWDEBUG=1 playwright test",
+    "headed": "playwright test --headed"
+  },
+  "keywords": [
+    "playwright",
+    "automation",
+    "testing",
+    "e2e",
+    "learning"
+  ],
+  "author": "muneebmughal09",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "latest"
+  },
+  "dependencies": {}
+}

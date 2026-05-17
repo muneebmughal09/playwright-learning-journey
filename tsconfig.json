@@ -1,1 +1,39 @@
-{\n  "compilerOptions\": {\n    "target\": "ES2020\",\n    "module\": "commonjs\",\n    "lib\": ["ES2020"],\n    "outDir\": "./dist\",\n    "rootDir\": \"./\",\n    "strict\": true,\n    "esModuleInterop\": true,\n    "skipLibCheck\": true,\n    "forceConsistentCasingInFileNames\": true,\n    "resolveJsonModule\": true,\n    "declaration\": true,\n    "declarationMap\": true,\n    "sourceMap\": true,\n    "noImplicitAny\": true,\n    "strictNullChecks\": true,\n    "strictFunctionTypes\": true,\n    "strictBindCallApply\": true,\n    "strictPropertyInitialization\": true,\n    "noImplicitThis\": true,\n    "alwaysStrict\": true,\n    "noUnusedLocals\": true,\n    "noUnusedParameters\": true,\n    "noImplicitReturns\": true,\n    "noFallthroughCasesInSwitch\": true,\n    "moduleResolution\": "node\",\n    "allowSyntheticDefaultImports\": true,\n    "baseUrl\": \".\",\n    "paths\": {\n      "@pages/*\": ["tests/pages/*"],\n      "@fixtures/*\": ["tests/fixtures/*"],\n      "@utils/*\": ["tests/utils/*"],\n      "@types/*\": ["tests/types/*"]\n    }\n  },\n  "include\": ["tests/**/*.ts", "tests/**/*.spec.ts"],\n  "exclude\": ["node_modules", "dist"]\n}\n
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "lib": ["ES2020"],
+    "outDir": "./dist",
+    "rootDir": "./",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true,
+    "ignoreDeprecations": "6.0",
+    "baseUrl": ".",
+    "paths": {
+      "@pages/*": ["tests/pages/*"],
+      "@fixtures/*": ["tests/fixtures/*"],
+      "@interfaces/*": ["tests/interfaces/*"]
+    }
+  },
+  "include": ["tests/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}

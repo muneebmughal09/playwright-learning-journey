@@ -1,8 +1,15 @@
 /**
  * 🔧 Page Fixtures
+ * 
+ * Usage in tests:
+ * import { test, expect } from '../fixtures/pages';
+ * 
+ * test('example', async ({ examplePage }) => {
+ *   await examplePage.navigate();
+ * });
  */
 
-import { test as base, Page } from '@playwright/test';
+import { test as base } from '@playwright/test';
 import { ExamplePage } from '../pages/example.page';
 import { GitHubPage } from '../pages/github.page';
 

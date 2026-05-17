@@ -1,6 +1,14 @@
 /**
  * 📝 Daily Learning Notes
  * Write in plain English what you learned each day!
+ * 
+ * Structure:
+ * - ✅ What you did
+ * - 🧠 Key learnings
+ * - 💡 Aha moments
+ * - 🚀 Accomplishments
+ * - ⚠️ Mistakes/challenges (also log separately in MISTAKES.md)
+ * - ❓ Questions for next day
  */
 
 # 📝 Daily Learning Notes

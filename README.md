@@ -19,13 +19,11 @@
 
 ## 📊 Learning Progress
 
-| Week | Focus | Status | Key Topics |
-|------|-------|--------|------------|
-| 1 | Core Basics | ✅ Done | Setup, Browser Launch, Navigation, Screenshots |
-| 2 | Selectors & Locators | 🔄 In Progress | CSS, XPath, Text Selectors, Locators |
-| 3 | User Interactions | ⏳ Coming | Click, Type, Hover, Drag-Drop |
-| 4 | Advanced Waiting | ⏳ Coming | Wait Strategies, Custom Waits, Timeouts |
-| 5 | Real Test Writing | ⏳ Coming | Test Structure, Assertions, Debugging |
+| Day | Focus | Status | File |
+|-----|-------|--------|------|
+| 01 | Basic Navigation & Assertions | ✅ | `01-basic-navigation.spec.ts` |
+| 02 | GitHub Page Interactions | ✅ | `02-github-page.spec.ts` |
+| 03+ | More concepts coming... | 🔄 | TBD |
 
 ---
 
@@ -34,25 +32,32 @@
 ```
 playwright-learning-journey/
 ├── README.md                    # This file
+├── LEARNING_LOG.md              # Daily practice log with plain English notes
 ├── GLOSSARY.md                  # Playwright terms explained
 ├── MISTAKES.md                  # Errors I made & solutions
 ├── resources.md                 # Helpful links & tutorials
 ├── package.json                 # Dependencies & scripts
+├── playwright.config.ts         # Playwright configuration
 │
 ├── tests/
-│   ├── example.spec.ts          # Example test file
-│   ├── week-01-core-basics/
-│   │   ├── 01-setup-and-config/
-│   │   │   ├── code.ts              # First setup script
-│   │   │   └── what-i-learned.md    # Detailed notes
-│   │   ├── 02-browser-launch/
-│   │   ├── 03-navigation/
-│   │   └── challenges-solved/
-│   │       └── challenge-1.md
-│   ├── week-02-selectors/          # (Coming Soon)
-│   └── week-03-interactions/       # (Coming Soon)
+│   ├── specs/                   # All test files (.spec.ts) numbered by day
+│   │   ├── 01-basic-navigation.spec.ts
+│   │   ├── 02-github-page.spec.ts
+│   │   └── ...more daily tests
+│   │
+│   ├── pages/                   # Page Objects
+│   │   ├── base.page.ts         # Base class with common methods
+│   │   ├── example.page.ts      # Example page object
+│   │   ├── github.page.ts       # GitHub page object
+│   │   └── ...more page objects
+│   │
+│   ├── fixtures/                # Test fixtures
+│   │   └── pages.ts             # Custom fixtures with page objects
+│   │
+│   └── interfaces/              # TypeScript interfaces
+│       └── test-config.interface.ts
 │
-└── examples/                   # Working code examples
+└── playwright.config.ts         # Global test configuration
 ```
 
 ---
@@ -71,101 +76,112 @@ npm install
 npx playwright install
 ```
 
-### 3. Run Examples
+### 3. Run Tests
 ```bash
-# Run a specific script
-npx ts-node tests/week-01-core-basics/01-setup-and-config/code.ts
+# Run all tests
+npm run test
 
-# Run with debug mode
-PWDEBUG=1 npx ts-node tests/week-01-core-basics/01-setup-and-config/code.ts
+# Run with headed browser (see the browser)
+npm run headed
+
+# Debug mode
+npm run debug
+
+# Run specific test
+npx playwright test tests/specs/01-basic-navigation.spec.ts
 ```
 
 ---
 
-## 📚 My Learning Approach
+## 📚 How Tests Are Organized
 
-1. **Learn One Concept** - Deep dive into one topic
-2. **Write Code** - Create working examples
-3. **Document Everything** - Write clear notes
-4. **Make Mistakes** - And document them!
-5. **Solve Real Problems** - Apply learning
-6. **Share Knowledge** - Help others learn
+### Daily Test Files (`tests/specs/`)
+Each day has a numbered test file:
+- `01-basic-navigation.spec.ts` - Day 1 learnings
+- `02-github-page.spec.ts` - Day 2 learnings
+- etc.
+
+Each test includes:
+- **Description** - What I'm testing
+- **Plain English comments** - "WHAT I DID:" explains each action
+- **Assertions** - Verify the behavior
+
+### Page Objects (`tests/pages/`)
+- `base.page.ts` - Common methods (navigate, click, getText, etc.)
+- `*.page.ts` - Specific page objects extending BasePage
+
+### Fixtures (`tests/fixtures/`)
+- Import and extend custom page objects
+- Reuse page objects across multiple tests
+
+### Interfaces (`tests/interfaces/`)
+- Define types for test data and configuration
 
 ---
 
 ## 🎯 Key Files to Check Out
 
-### For Beginners:
-- **[Week 1 Notes](./tests/week-01-core-basics/01-setup-and-config/what-i-learned.md)** - Start here!
-- **[Glossary](./GLOSSARY.md)** - Confused by a term? Check here
-- **[Mistakes](./MISTAKES.md)** - Learn from my errors
+### For Daily Learning:
+- **[Daily Notes](./DAILY_NOTES.md)** - Track daily practice in plain English
+- **[Tests](./tests/specs/)** - All test files numbered by day
 
-### For Learning Resources:
+### For Reference:
+- **[Glossary](./GLOSSARY.md)** - Playwright terms explained
+- **[Mistakes](./MISTAKES.md)** - Errors I made & solutions
 - **[Resources](./resources.md)** - Official docs, tutorials, communities
 
-### For Code Examples:
-- **[Week 1 Code](./tests/week-01-core-basics/)** - Setup and basic scripts
+### For Implementation:
+- **[Base Page Object](./tests/pages/base.page.ts)** - Common methods all pages use
+- **[Fixtures](./tests/fixtures/pages.ts)** - Custom test fixtures with page objects
+- **[Interfaces](./tests/interfaces/)** - TypeScript types for tests
 
 ---
 
 ## 💡 Current Focus
 
-**This Week:** Core Basics - Browser Launch, Navigation, Screenshots
+**Daily Practice Structure:**
+- Each day = one `.spec.ts` file in `tests/specs/`
+- Tests have plain English comments explaining what I learned
+- Page objects abstract away implementation details
+- Fixtures provide reusable page objects
 
-**Last Updated:** May 2026  
-**Learning Streak:** 🔥 Starting fresh!  
-**Confidence Level:** Growing 📈
-
----
-
-## 🤝 How to Use This Repo
-
-### ⭐ Star if it helps you!
-If you find this useful, please star the repo. It motivates me to keep sharing my learning!
-
-### 💬 Have Questions?
-Feel free to:
-- Open an issue with questions
-- Suggest topics you want me to cover
-- Share your own learnings
-
-### 🔄 Follow My Journey
-Watch my GitHub to see updates as I progress. Each week brings new content!
+**Today's Status:** Day 02 - GitHub Page Interactions  
+**Total Tests:** 4 passing ✅  
+**Learning Streak:** 🔥 Active  
 
 ---
 
-## 📖 Learning Resources I Use
+## ✨ Best Practices in This Project
 
-- [Official Playwright Docs](https://playwright.dev)
-- [Playwright GitHub](https://github.com/microsoft/playwright)
-- [Playwright Discord Community](https://discord.com/invite/XVDr4YSBQE)
-- [YouTube Tutorials](https://www.youtube.com/results?search_query=playwright+tutorial)
-
----
-
-## 🎓 My Goal
-
-By the end of this journey, I want to:
-- ✅ Master all Playwright fundamentals
-- ✅ Solve complex automation problems
-- ✅ Help others learn Playwright
-- ✅ Build practical real-world tests
-- ✅ Become known in the Playwright community
+1. **One Test = One Behavior** - Each test verifies one specific thing
+2. **Page Objects Pattern** - Hide selectors and implementation details
+3. **Clear Naming** - Test names describe exactly what they test
+4. **Plain English Explanations** - Every test is explained in simple terms
+5. **Reusable Fixtures** - Page objects are injected as fixtures
+6. **Type Safety** - TypeScript interfaces for configuration
+7. **Base Classes** - Common methods in BasePage reduce duplication
 
 ---
 
-## 📝 Note to You (The Visitor)
+## 📖 My Learning Journey
 
-If you're also learning Playwright, **you're in the right place**! This repo documents my real learning journey with:
-- ✅ Actual code that works
-- ✅ Honest mistakes and solutions
-- ✅ Clear explanations for beginners
-- ✅ Weekly updates
-
-**Join me on this journey!** 🚀
+✅ Daily test files keep me organized
+✅ Page objects keep code clean
+✅ Fixtures make tests reusable
+✅ Plain English comments help me remember
+✅ Each day builds on the last
 
 ---
 
-**Last Updated:** May 16, 2026  
-**Repo Status:** 🟢 Active Learning  
+## 🤝 Questions?
+
+This is a learning project! If you have questions or want to learn Playwright too:
+- Open an issue
+- Check out the LEARNING_LOG.md
+- Look at the test files in `tests/specs/`
+
+---
+
+**Last Updated:** May 17, 2026  
+**Status:** 🟢 Actively Learning  
 **Author:** [@muneebmughal09](https://github.com/muneebmughal09)

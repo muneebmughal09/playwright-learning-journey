@@ -22,8 +22,6 @@
 | Day | Focus | Status | File |
 |-----|-------|--------|------|
 | 01 | Basic Navigation & Assertions | ✅ | `01-basic-navigation.spec.ts` |
-| 02 | GitHub Page Interactions | ✅ | `02-github-page.spec.ts` |
-| 03+ | More concepts coming... | 🔄 | TBD |
 
 ---
 
@@ -32,7 +30,7 @@
 ```
 playwright-learning-journey/
 ├── README.md                    # This file
-├── LEARNING_LOG.md              # Daily practice log with plain English notes
+├── DAILY_NOTES.md               # Daily practice log with plain English notes
 ├── GLOSSARY.md                  # Playwright terms explained
 ├── MISTAKES.md                  # Errors I made & solutions
 ├── resources.md                 # Helpful links & tutorials
@@ -42,13 +40,11 @@ playwright-learning-journey/
 ├── tests/
 │   ├── specs/                   # All test files (.spec.ts) numbered by day
 │   │   ├── 01-basic-navigation.spec.ts
-│   │   ├── 02-github-page.spec.ts
 │   │   └── ...more daily tests
 │   │
 │   ├── pages/                   # Page Objects
 │   │   ├── base.page.ts         # Base class with common methods
 │   │   ├── example.page.ts      # Example page object
-│   │   ├── github.page.ts       # GitHub page object
 │   │   └── ...more page objects
 │   │
 │   ├── fixtures/                # Test fixtures
@@ -98,8 +94,6 @@ npx playwright test tests/specs/01-basic-navigation.spec.ts
 ### Daily Test Files (`tests/specs/`)
 Each day has a numbered test file:
 - `01-basic-navigation.spec.ts` - Day 1 learnings
-- `02-github-page.spec.ts` - Day 2 learnings
-- etc.
 
 Each test includes:
 - **Description** - What I'm testing
@@ -145,9 +139,9 @@ Each test includes:
 - Page objects abstract away implementation details
 - Fixtures provide reusable page objects
 
-**Today's Status:** Day 02 - GitHub Page Interactions  
-**Total Tests:** 4 passing ✅  
-**Learning Streak:** 🔥 Active  
+**Today's Status:** Mastering Day 01 - Basic Navigation & Assertions  
+**Total Tests:** 2 passing ✅  
+**Learning Streak:** 🔥 Focused  
 
 ---
 
@@ -177,7 +171,7 @@ Each test includes:
 
 This is a learning project! If you have questions or want to learn Playwright too:
 - Open an issue
-- Check out the LEARNING_LOG.md
+- Check out the DAILY_NOTES.md
 - Look at the test files in `tests/specs/`
 
 ---

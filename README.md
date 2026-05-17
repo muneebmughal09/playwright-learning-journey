@@ -39,17 +39,19 @@ playwright-learning-journey/
 ├── resources.md                 # Helpful links & tutorials
 ├── package.json                 # Dependencies & scripts
 │
-├── week-01-core-basics/
-│   ├── 01-setup-and-config/
-│   │   ├── code.js              # First setup script
-│   │   └── what-i-learned.md    # Detailed notes
-│   ├── 02-browser-launch/
-│   ├── 03-navigation/
-│   └── challenges-solved/
-│       └── challenge-1.md
+├── tests/
+│   ├── example.spec.ts          # Example test file
+│   ├── week-01-core-basics/
+│   │   ├── 01-setup-and-config/
+│   │   │   ├── code.ts              # First setup script
+│   │   │   └── what-i-learned.md    # Detailed notes
+│   │   ├── 02-browser-launch/
+│   │   ├── 03-navigation/
+│   │   └── challenges-solved/
+│   │       └── challenge-1.md
+│   ├── week-02-selectors/          # (Coming Soon)
+│   └── week-03-interactions/       # (Coming Soon)
 │
-├── week-02-selectors/          # (Coming Soon)
-├── week-03-interactions/       # (Coming Soon)
 └── examples/                   # Working code examples
 ```
 
@@ -72,10 +74,10 @@ npx playwright install
 ### 3. Run Examples
 ```bash
 # Run a specific script
-node week-01-core-basics/01-setup-and-config/code.js
+npx ts-node tests/week-01-core-basics/01-setup-and-config/code.ts
 
 # Run with debug mode
-PWDEBUG=1 node week-01-core-basics/01-setup-and-config/code.js
+PWDEBUG=1 npx ts-node tests/week-01-core-basics/01-setup-and-config/code.ts
 ```
 
 ---
@@ -94,7 +96,7 @@ PWDEBUG=1 node week-01-core-basics/01-setup-and-config/code.js
 ## 🎯 Key Files to Check Out
 
 ### For Beginners:
-- **[Week 1 Notes](./week-01-core-basics/01-setup-and-config/what-i-learned.md)** - Start here!
+- **[Week 1 Notes](./tests/week-01-core-basics/01-setup-and-config/what-i-learned.md)** - Start here!
 - **[Glossary](./GLOSSARY.md)** - Confused by a term? Check here
 - **[Mistakes](./MISTAKES.md)** - Learn from my errors
 
@@ -102,7 +104,7 @@ PWDEBUG=1 node week-01-core-basics/01-setup-and-config/code.js
 - **[Resources](./resources.md)** - Official docs, tutorials, communities
 
 ### For Code Examples:
-- **[Week 1 Code](./week-01-core-basics/)** - Setup and basic scripts
+- **[Week 1 Code](./tests/week-01-core-basics/)** - Setup and basic scripts
 
 ---
 

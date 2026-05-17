@@ -1,7 +1,7 @@
 // 🎭 Playwright First Script - Your Starting Point!
 // This is the basic template you'll use for every Playwright script
 
-const { chromium } = require('@playwright/test');
+import { chromium } from '@playwright/test';
 
 (async () => {
   // Step 1: Launch Browser
@@ -75,7 +75,7 @@ const { chromium } = require('@playwright/test');
 // ✅ Take screenshots for debugging
 //
 // Next Steps:
-// 1. Run this script: node code.js
+// 1. Run this script: npx ts-node code.ts
 // 2. Check screenshot-example.png
 // 3. Modify it to navigate to different websites
 // 4. Try clicking buttons (next week!)

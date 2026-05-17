@@ -34,3 +34,9 @@ playwright-report/
 dist/
 build/
 .turbo/
+
+# Playwright
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/

@@ -7,7 +7,6 @@
 > - Comprehensive notes on every concept
 > - Real problems I solve along the way
 > - Resources that actually help
-> - Mistakes I made (so you don't)
 >
 > **Who should follow?**
 > - People starting their Playwright journey
@@ -31,8 +30,6 @@
 playwright-learning-journey/
 ├── README.md                    # This file
 ├── DAILY_NOTES.md               # Daily practice log with plain English notes
-├── GLOSSARY.md                  # Playwright terms explained
-├── MISTAKES.md                  # Errors I made & solutions
 ├── resources.md                 # Helpful links & tutorials
 ├── package.json                 # Dependencies & scripts
 ├── playwright.config.ts         # Playwright configuration
@@ -120,8 +117,6 @@ Each test includes:
 - **[Tests](./tests/specs/)** - All test files numbered by day
 
 ### For Reference:
-- **[Glossary](./GLOSSARY.md)** - Playwright terms explained
-- **[Mistakes](./MISTAKES.md)** - Errors I made & solutions
 - **[Resources](./resources.md)** - Official docs, tutorials, communities
 
 ### For Implementation:

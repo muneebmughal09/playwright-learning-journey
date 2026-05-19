@@ -5,3 +5,6 @@ test('Actions Practice', async({page}) =>{
     await page.getByRole('link', {name: 'Get Started'}).click();
 });
 
+test('Actions Practice', async({page})=>{
+    await page.goto('https://playwright.dev');
+});

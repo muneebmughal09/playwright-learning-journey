@@ -11,6 +11,6 @@ What I did today:
 
 ## 2026-05-19
 What I did today:
-1.
+1. I have learned basic actions and assertions
 2.
 

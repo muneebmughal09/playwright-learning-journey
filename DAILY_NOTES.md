@@ -11,6 +11,13 @@ What I did today:
 
 ## 2026-05-19
 What I did today:
-1. I have learned basic actions and assertions
-2.
+1. Completed Day 1: Basic Actions & Assertions
+2. Learned semantic locators vs CSS selectors
+3. Practiced key assertion types: toHaveTitle, toHaveURL, toBeVisible
+4. Understood auto-wait and expect assertions
+5. Fixed regex URL patterns for stability
+6. Chained locators to narrow element selection
+
+## 2026-05-20
+Ready for Day 2: Locator Strategy Deep Dive
 

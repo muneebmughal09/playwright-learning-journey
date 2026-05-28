@@ -27,4 +27,9 @@ test('Link Visibility with Chained Locators', async({page}) =>{
     await page.goto('https://www.playwright.dev');
     const link = page.getByRole('link', {name: 'Get Started'}).getByText('Get Started');
     await expect(link).toBeVisible();
+
+});
+
+test("practice", async({page}) => {
+    await page.goto('https://www.playwright.dev');
 });

@@ -18,6 +18,9 @@ What I did today:
 5. Fixed regex URL patterns for stability
 6. Chained locators to narrow element selection
 
-## 2026-05-20
-Ready for Day 2: Locator Strategy Deep Dive
+## 20-05-2026
+What I did today:
+1. Practiced getByRole locators again
+2. Started practicing getByText to explore other locators
+3. Practiced getByLabel locators
 
